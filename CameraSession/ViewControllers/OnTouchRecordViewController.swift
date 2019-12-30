@@ -39,13 +39,13 @@ class OnTouchRecordViewController: UIViewController, Storyboardable {
     var notActiveButtonImage: UIImage?
     var activeButtonImage: UIImage?
 
-    var captureSessionState: Bool = false {
+    var isRecording: Bool = false {
         didSet {
-            let cameraButtonStateImage = captureSessionState ? activeButtonImage : notActiveButtonImage
+            let cameraButtonStateImage = isRecording ? activeButtonImage : notActiveButtonImage
             cameraButton.setImage(cameraButtonStateImage, for: .normal)
 
-            torchButton.isEnabled = !captureSessionState
-            rotateCameraButton.isEnabled = !captureSessionState
+            torchButton.isEnabled = !isRecording
+            rotateCameraButton.isEnabled = !isRecording
         }
     }
 
@@ -124,7 +124,7 @@ class OnTouchRecordViewController: UIViewController, Storyboardable {
 
     @objc private func cameraButtonHoldDown() {
         /// set session state
-        captureSessionState = true
+        isRecording = true
 
         /// make sure progress view is removed from superView
         if let viewWithTag = self.cameraButton.viewWithTag(circularProgressViewTag) {
@@ -137,12 +137,15 @@ class OnTouchRecordViewController: UIViewController, Storyboardable {
 
             /// start video recording
             dhCaptureSessionDelegate?.startRecording()
+
+            /// start auto stop recording video
+            stopRecordingAfter(timeInterval: takeVideoLength)
         }
     }
 
     @objc private func cameraButtonHoldReleased() {
         /// set session state
-        captureSessionState = false
+        isRecording = false
 
         if isTakingVideo != true {
             /// take screenshot
@@ -180,6 +183,14 @@ class OnTouchRecordViewController: UIViewController, Storyboardable {
             device.unlockForConfiguration()
         } catch {
             print("Torch could not be used", #line)
+        }
+    }
+
+    private func stopRecordingAfter(timeInterval time: TimeInterval) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + time) {
+            if self.isRecording == true {
+                self.cameraButtonHoldReleased()
+            }
         }
     }
 
