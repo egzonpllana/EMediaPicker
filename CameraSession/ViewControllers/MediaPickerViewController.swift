@@ -44,7 +44,6 @@ class MediaPickerViewController: UIViewController, Storyboardable {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.mediaTypes = [(kUTTypeImage as String)]
-        imagePicker.allowsEditing = true
         return imagePicker
     }()
 
@@ -159,7 +158,7 @@ extension MediaPickerViewController: UIImagePickerControllerDelegate, UINavigati
             picker.dismiss(animated: true)
         }
 
-        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             self.choosenImageData = image.jpeg(.lowest)
         } else if let videoURL = info[UIImagePickerController.InfoKey.mediaURL] as? NSURL {
             self.choosenVideoPath = videoURL as URL

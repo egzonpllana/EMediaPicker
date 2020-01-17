@@ -81,15 +81,20 @@ class CameraPermissionsViewController: UIViewController {
 
     private func grantCameraPermission() {
         let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
-        if cameraAuthorizationStatus ==  .notDetermined {
+        switch cameraAuthorizationStatus {
+        case .authorized:
+            print("present you viewcontroller")
+        case .notDetermined:
             AVCaptureDevice.requestAccess(for: AVMediaType.video, completionHandler: { (granted: Bool) -> Void in
                 if granted == true {
                     /// User granted
                     self.setupButtonsVisibility()
                 }
             })
-        } else {
+        case .denied, .restricted:
             self.showPhoneSettings()
+        default:
+            fatalError("Camera Authorization Status not handled!")
         }
     }
 
