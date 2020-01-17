@@ -27,8 +27,11 @@ Camera Session - iOS App.
 
 ## Preview ##
 
+### Ask for camera, library and microphone permissions. ###
 ![New Project](https://user-images.githubusercontent.com/27929436/71415656-1424ee00-265d-11ea-8662-c5b966537fb6.png)
 
+### Multi selection of phone assets, like photos or videos. ###
 ![New Project-2](https://user-images.githubusercontent.com/27929436/71415697-49c9d700-265d-11ea-80ba-1c2076b8448d.png)
 
+### Take multiple photos or record a video while holding down record button. ###
 ![New Project-3](https://user-images.githubusercontent.com/27929436/71415699-4afb0400-265d-11ea-99fd-be33eb13f625.png)
