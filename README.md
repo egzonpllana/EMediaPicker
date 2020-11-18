@@ -1,7 +1,7 @@
 # EMediaPicker
 A great way of picking assets from PhotoLibrary and taking photos or videos through Camera session.
 
-![Screen Shot 2020-11-18 at 4-2](https://user-images.githubusercontent.com/27929436/99553953-fe2fc280-29be-11eb-95d4-2c18e3d07da2.png)
+![full-app-preview](https://user-images.githubusercontent.com/27929436/99555401-8ebad280-29c0-11eb-8b11-ff50795487b6.png)
 
 ## Assets Picker ##
 - Photos
