@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U7h-KT-HnS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Media Picker Permissions View Controller-->
+        <scene sceneID="zUV-1K-BFx">
+            <objects>
+                <viewController storyboardIdentifier="MediaPickerPermissionsViewController" id="U7h-KT-HnS" customClass="MediaPickerPermissionsViewController" customModule="EReminder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sih-HR-qMM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfU-YS-8Id">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="659"/>
+                                <connections>
+                                    <action selector="blackViewPressed:" destination="U7h-KT-HnS" eventType="touchUpInside" id="cLg-Es-kKH"/>
+                                </connections>
+                            </button>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4RU-Db-97o" customClass="UIRoundedView" customModule="EReminder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="659" width="414" height="237"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aNG-eh-wNn" customClass="UIExtendedView" customModule="EReminder" customModuleProvider="target">
+                                        <rect key="frame" x="188" y="4" width="38" height="6"/>
+                                        <color key="backgroundColor" red="0.65100002290000003" green="0.68199998139999995" blue="0.71399998659999997" alpha="0.77614524149999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="6" id="csg-cc-6dj"/>
+                                            <constraint firstAttribute="width" constant="38" id="kE7-57-8Nd"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="nZp-0p-D2J">
+                                        <rect key="frame" x="84.5" y="26" width="245.5" height="177"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="2aO-Ea-TCl">
+                                                <rect key="frame" x="0.0" y="0.0" width="245.5" height="51"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Access Request" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDB-1B-MK4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="245.5" height="33"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                                        <color key="textColor" name="darkGrey"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Permissions to select media for reminder." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PoO-ft-B4F">
+                                                        <rect key="frame" x="0.0" y="33" width="245.5" height="18"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="13"/>
+                                                        <color key="textColor" name="steelGrey"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="GRT-iB-CDL">
+                                                <rect key="frame" x="40" y="67" width="165" height="110"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXL-cd-FWD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="165" height="34"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                                        <state key="normal" title="1. Camera Permissions">
+                                                            <color key="titleColor" name="darkGrey"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="accessButtonPressed:" destination="U7h-KT-HnS" eventType="touchUpInside" id="tay-ZO-jb2"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ik-Lm-j0I">
+                                                        <rect key="frame" x="3" y="38" width="159" height="34"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                                        <state key="normal" title="2. Library Permissions">
+                                                            <color key="titleColor" name="darkGrey"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="accessButtonPressed:" destination="U7h-KT-HnS" eventType="touchUpInside" id="sOL-TS-c46"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Iu-n0-oDC">
+                                                        <rect key="frame" x="7" y="76" width="151" height="34"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                                        <state key="normal" title="3. Video Permissions">
+                                                            <color key="titleColor" name="darkGrey"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="accessButtonPressed:" destination="U7h-KT-HnS" eventType="touchUpInside" id="3UQ-Em-8cT"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="YTk-Mh-pfu">
+                                        <rect key="frame" x="127.5" y="89" width="159.5" height="90"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.on.rectangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Qty-8m-LdA">
+                                                <rect key="frame" x="54.5" y="0.5" width="50" height="49.5"/>
+                                                <color key="tintColor" name="dark"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="1Hv-fi-44g"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Xbd-ew-YKr"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You're all set." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FqS-u6-5L5">
+                                                <rect key="frame" x="0.0" y="54" width="159.5" height="36"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="26"/>
+                                                <color key="textColor" name="darkGrey"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="YTk-Mh-pfu" firstAttribute="top" secondItem="aNG-eh-wNn" secondAttribute="bottom" constant="79" id="3VD-kU-hfE"/>
+                                    <constraint firstItem="nZp-0p-D2J" firstAttribute="top" secondItem="aNG-eh-wNn" secondAttribute="bottom" constant="16" id="L9g-5G-hEM"/>
+                                    <constraint firstItem="YTk-Mh-pfu" firstAttribute="centerX" secondItem="4RU-Db-97o" secondAttribute="centerX" id="R3C-jj-yuG"/>
+                                    <constraint firstItem="aNG-eh-wNn" firstAttribute="centerX" secondItem="4RU-Db-97o" secondAttribute="centerX" id="TF6-nT-JL8"/>
+                                    <constraint firstAttribute="bottom" secondItem="nZp-0p-D2J" secondAttribute="bottom" constant="34" id="bgM-z5-bGZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="YTk-Mh-pfu" secondAttribute="bottom" constant="58" id="byB-TO-lHd"/>
+                                    <constraint firstItem="aNG-eh-wNn" firstAttribute="top" secondItem="4RU-Db-97o" secondAttribute="top" constant="4" id="oXy-zG-o8l"/>
+                                    <constraint firstItem="nZp-0p-D2J" firstAttribute="centerX" secondItem="4RU-Db-97o" secondAttribute="centerX" id="wzx-Lc-UXU"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="topLeftCorner" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="topRightCorner" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeftCorner" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRightCorner" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="E5g-Kx-Xvh"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sfU-YS-8Id" firstAttribute="top" secondItem="sih-HR-qMM" secondAttribute="top" id="3C4-ns-yqP"/>
+                            <constraint firstItem="4RU-Db-97o" firstAttribute="top" secondItem="sfU-YS-8Id" secondAttribute="bottom" id="ClM-YS-11t"/>
+                            <constraint firstAttribute="top" secondItem="sfU-YS-8Id" secondAttribute="top" id="EkK-R5-NR2"/>
+                            <constraint firstItem="4RU-Db-97o" firstAttribute="centerX" secondItem="E5g-Kx-Xvh" secondAttribute="centerX" id="QtZ-oB-TM0"/>
+                            <constraint firstItem="4RU-Db-97o" firstAttribute="bottom" secondItem="sih-HR-qMM" secondAttribute="bottom" id="VfP-HD-2H9"/>
+                            <constraint firstItem="E5g-Kx-Xvh" firstAttribute="trailing" secondItem="sfU-YS-8Id" secondAttribute="trailing" id="fah-Fk-cHd"/>
+                            <constraint firstItem="sfU-YS-8Id" firstAttribute="leading" secondItem="E5g-Kx-Xvh" secondAttribute="leading" id="lND-8H-QuT"/>
+                            <constraint firstItem="E5g-Kx-Xvh" firstAttribute="trailing" secondItem="4RU-Db-97o" secondAttribute="trailing" id="xdN-fe-Qae"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="accessButtonsStackView" destination="nZp-0p-D2J" id="dhg-bY-1h3"/>
+                        <outlet property="allSetBottomConstraint" destination="byB-TO-lHd" id="QH0-eb-IhE"/>
+                        <outlet property="allSetStackView" destination="YTk-Mh-pfu" id="Q94-xs-t1W"/>
+                        <outlet property="allViewContentView" destination="4RU-Db-97o" id="Ovv-u8-fph"/>
+                        <outlet property="bottomConstraint" destination="bgM-z5-bGZ" id="86x-6p-G9o"/>
+                        <outlet property="cameraButton" destination="WXL-cd-FWD" id="mV5-En-J5F"/>
+                        <outlet property="libraryButton" destination="6ik-Lm-j0I" id="Ufy-lj-twf"/>
+                        <outlet property="microphoneButton" destination="7Iu-n0-oDC" id="SUG-T4-caU"/>
+                        <outlet property="titleLabel" destination="eDB-1B-MK4" id="ix4-K8-kC0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zag-ri-pAz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="-283.25892857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera.on.rectangle.fill" catalog="system" width="128" height="96"/>
+        <namedColor name="dark">
+            <color red="0.17299999296665192" green="0.20800000429153442" blue="0.25900000333786011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="darkGrey">
+            <color red="0.12200000137090683" green="0.1289999932050705" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="steelGrey">
+            <color red="0.45100000500679016" green="0.49399998784065247" blue="0.54100000858306885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

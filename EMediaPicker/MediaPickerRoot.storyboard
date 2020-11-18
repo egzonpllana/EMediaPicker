@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1TU-uV-ghO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Media Picker Root View Controller-->
+        <scene sceneID="1dg-03-IAT">
+            <objects>
+                <viewController storyboardIdentifier="MediaPickerRootViewController" id="1TU-uV-ghO" customClass="MediaPickerRootViewController" customModule="ApperTestingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FhI-KN-Qsk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eb-tf-dXN">
+                                <rect key="frame" x="112" y="437" width="190" height="22"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Show Media Picker" image="camera.fill.badge.ellipsis" catalog="system">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="showMediaPicker:" destination="1TU-uV-ghO" eventType="touchUpInside" id="myo-yM-vtP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dRw-3u-ahc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1eb-tf-dXN" firstAttribute="centerX" secondItem="FhI-KN-Qsk" secondAttribute="centerX" id="16P-MZ-Uio"/>
+                            <constraint firstItem="1eb-tf-dXN" firstAttribute="centerY" secondItem="FhI-KN-Qsk" secondAttribute="centerY" id="wBS-Jg-zXa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="IIj-vO-nCC" kind="presentation" identifier="mediaPickerSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="zA7-pi-M85"/>
+                        <segue destination="33V-cq-KXU" kind="presentation" identifier="permissionSegue" modalPresentationStyle="overCurrentContext" modalTransitionStyle="coverVertical" id="3Ad-Yp-V7V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P7T-3x-d67" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-239" y="106"/>
+        </scene>
+        <!--MediaPickerPermissions-->
+        <scene sceneID="090-aD-J9t">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MediaPickerPermissions" id="33V-cq-KXU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V6I-Jx-2BF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="424" y="96"/>
+        </scene>
+        <!--MediaPicker-->
+        <scene sceneID="CTi-Zz-cO0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MediaPicker" id="IIj-vO-nCC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nvh-o5-HMv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="371" y="60"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera.fill.badge.ellipsis" catalog="system" width="128" height="92"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

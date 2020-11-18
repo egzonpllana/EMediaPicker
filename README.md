@@ -1,37 +1,39 @@
-# Camera Session #
-# Implementation of default and custom camera sessions. #
-Camera Session - iOS App.
+# EMediaPicker
+A great way of picking assets from PhotoLibrary and taking photos or videos through Camera session.
 
-    Camera Session is an iOS app that try to make the simplest possible way of implementation of AVCaptureSession.
-    Through the app you can find these camera session implemented:
-    - Native camera to take picture or record a video.
-    - Native way of importing photos and videos
-    - Custom way to select assets like photos and videos, with an option to select one or more assets from Library.
-    - Custom camera to take photo(s) or video(s), with a options to hold down the button and record.
-    - Custom camera feature like torch and rotate options.
+![Screen Shot 2020-11-18 at 4-2](https://user-images.githubusercontent.com/27929436/99553953-fe2fc280-29be-11eb-95d4-2c18e3d07da2.png)
 
-## Repository ##
+## Assets Picker ##
+- Photos
+- Videos
 
-    * [Bitbucket repository](https://bitbucket.org/)
+## Camera Session ##
+- Take a photo
+- Record a video while holding the record button
+- Torch option
+- Rotate option
 
-## Developers ##
-    * Egzon Pllana - 12/24/19
+## Architecture ##
+- AVCaptureSession
+- AssetsLibrary
+- Photos
 
-### Pods documentation ###
+## View controllers Managment ##
+- Managing child view controllers with container view controllers
 
-    * No pods
-    
-## Application Design Pattern ##
+## Permissions View Controller ##
 
-    * MVC
+![permission-preview](https://user-images.githubusercontent.com/27929436/99550658-3df4ab00-29bb-11eb-8204-b9908cff0425.gif)
 
-## Preview ##
+## Photo Library ##
 
-### Ask for camera, library and microphone permissions. ###
-![New Project](https://user-images.githubusercontent.com/27929436/71415656-1424ee00-265d-11ea-8662-c5b966537fb6.png)
+![photoLibrary-preview](https://user-images.githubusercontent.com/27929436/99550705-4d73f400-29bb-11eb-9d6c-c5835c3fe781.gif)
 
-### Multi selection of phone assets, like photos or videos. ###
-![New Project-2](https://user-images.githubusercontent.com/27929436/71415697-49c9d700-265d-11ea-80ba-1c2076b8448d.png)
+## Switch Camera & Photo Library ##
 
-### Take multiple photos or record a video while holding down record button. ###
-![New Project-3](https://user-images.githubusercontent.com/27929436/71415699-4afb0400-265d-11ea-99fd-be33eb13f625.png)
+![camera-preview](https://user-images.githubusercontent.com/27929436/99550769-5d8bd380-29bb-11eb-8d41-d082cb966b3c.gif)
+
+## Take Video from Camera ##
+
+![take-video-preview](https://user-images.githubusercontent.com/27929436/99551432-24079800-29bc-11eb-9451-2358530ef6e4.gif)
+
